@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+// import RSCDemo from "./RSCDemo";
 
 export default function ClientDemo({ children }) {
   const [count, setCount] = useState(0);
@@ -12,11 +13,8 @@ export default function ClientDemo({ children }) {
       <p>
         Will be rendered on the client <strong>AND</strong> the server.
       </p>
-      <button onClick={() => setCount((prevCount) => prevCount + 1)}>
-        Increase
-      </button>
-      <span>{count}</span>
       {children}
+      {/* <RSCDemo /> */}
     </div>
   );
 }
